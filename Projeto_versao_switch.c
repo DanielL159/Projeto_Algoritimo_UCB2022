@@ -1,5 +1,6 @@
 
-/*(Valor: 4,0 pontos) Um cinema de Brasília está interessado em descobrir o perfil das pessoas
+
+                /*(Valor: 4,0 pontos) Um cinema de Brasília está interessado em descobrir o perfil das pessoas
 que frequentam suas sessões de filmes e, para isso, necessita analisar as informacões
 prestadas. Devem ser solicitados a quantidade de sessões que serão realizadas e, para cada
 sessão, o nome do filme, a quantidade de pessoas que assistiram o filme, assim como, o sexo, a
@@ -35,31 +36,21 @@ ponto)*/
 
 int main (){
     int sessoes,pessoasPFilme[2],idade[100];
-    int crianca=0,adolescentes=0,adulto=0,idoso=0,mIdadeMasculino=0,mIdadeFeminino=0;
-    int qInteira=0,qMeia=0;
-    int quantidade;
-    int i,j;
-    int masculino=0,feminino=0,opcao;
-
     float total=0.00,inteira[100] ,meia[100];
-
-    char filme [2][100],caracteristica[100][50];
+    int quantidade[100];
+    int i,j,a,b;
+    int masculino=0,feminino=0,opcao;
+    char filme [2][50],caracteristica[50];
 
     printf("Me forneca a quantidade de sessoes ? ");
     scanf("%d",&sessoes);
-    while (sessoes != 2 )
-    {
-        printf("\n\nNumero de sessoes maior ou menos que o permitido\nMe forneca a quantidade de sessoes ? ");
-        scanf("%d",&sessoes);
-    }
-    
 
     if (sessoes == 2){
         for ( i = 0; i < 2; i++)
         {
-            printf("\nMe forneca o nome do filme da sessao %d: ",i+1);
+            printf("Me forneca o nome do filme da sessao %d: ",i+1);
             fflush(stdin);
-            fgets(filme[i],100,stdin);
+            fgets(filme[i],50,stdin);
 
             printf("\nMe forneca o numero de pessoas que assistiram o filme: ",filme[i]);
             scanf("%d",&pessoasPFilme[i]);
@@ -73,7 +64,7 @@ int main (){
 
             for ( j = 0; j <= pessoasPFilme; j++)
             {
-                /*printf("\n\nA pessoa %d e do sexo (M)asculino ou (F)eminino: ",j+1);
+               /* printf("\n\nA pessoa %d e do sexo (M)asculino ou (F)eminino: ",j+1);
                 fflush(stdin);
                 scanf("%c",&caracteristica);
 
@@ -98,7 +89,6 @@ int main (){
                     }  
 
                 }*/
-
                 
                 printf("\n\nMe informe a idade da pessoa %d ",j+1);
                 scanf("%d",&idade[j]);
@@ -109,30 +99,11 @@ int main (){
                   scanf("%d",&idade[j]);
                 }
 
-                    if (idade >18 && caracteristica[j] =='M' ){
-                        mIdadeMasculino++;
-                    }else if (idade >18 && caracteristica[j] =='F'){
-                        mIdadeFeminino++;
-                    }
-
-                   if (idade[j] >=3 && idade[j]<=13)
-                    {
-                     crianca++;
-                    }else if (idade[j] >=14 && idade[j] <= 17)
-                    {
-                        adolescentes++;
-                    }else if (idade[j] >=18 && idade[j] <= 64 ){
-                        adulto++;
-                    }else if (idade[j] >= 65 && idade[j]<= 100 ){
-                        idoso++;
-                    }
-            
-
-                printf("A pessoa %d desseja um ingresso\n(1)INTEIRA - R$50,00\n(2)MEIA - R$25,00\n",j+1);
+                printf("A pessoa %d desseja um ingresso\n(1)INTEIRA - R$50,00\n(1)MEIA - R$25,00\n",j+1);
                 scanf("%d",&opcao);
                 while (opcao >2 || opcao <1)
                 {
-                    printf("Opcao da pessoa %d e invalida , por favor me informe qual ingresso a pessoa deseja\n(1)INTEIRA - R$50,00\n(2)MEIA - R$25,00\n",j+1);
+                    printf("Opcao da pessoa %d e invalida , por favor me informe qual ingresso a pessoa deseja\n(1)MEIA - R$25,00\n(2)INTEIRA - R$50,00\n",j+1);
                     scanf("%d",&opcao);
                 }
 
@@ -142,40 +113,31 @@ int main (){
                 switch (opcao)
                 {
                     case 1:
-                        inteira[j] = 50.0 * quantidade;
+                        inteira[j] = 50.0 * quantidade[j];
                         printf("Valo a pagar: R$%.2f",inteira[j]);
                         total = total + inteira[j];
-                        qInteira++;
+                        printf("%d",total);
                     break;
 
                     case 2:
-                        meia[j] = 25.0 * quantidade;
+                        meia[j] = 25.0 * quantidade[j];
                         printf("Valo a pagar: R$%.2f",meia[j]);
                         total = total + meia[j];
-                        qMeia++;
+                        
                     break;
                 
                 }
                  
-               
+             
+
+
+
             }
-         
             
-  
-            printf("O Filme %sconta com a participacao de homens %d e mulheres %dzn",filme[i],masculino,feminino);
-            printf("\tFaixa Etaria\tClassificacao\tQuantidade");
-            printf("\tde 3 até 13 anos\tCriancas\t%d\n\tde 14 até 17 anos\tAdolescentes\t%d\n\tde 18 até 64 anos\tAdultos\t%d\n\tde 65 até 100 anos\tIdosos\t%d\n\n",crianca,adolescentes,adulto,idoso);
-            printf("Quantidade de Homens maiores de 18:%d\nQuantidade de Mulheres maiores de 18 anos:%d",mIdadeMasculino,mIdadeFeminino);
-            if (qMeia>qInteira)
-            {
-                printf("Houveram mais vendas de ingressos de meia do que de inteira e o valor arrecadado e :%f",total);
-            }else if (qInteira>qMeia){
-                printf("Houveram mais vendas de ingressos de Inteira do que de Meia e o valor arrecadado e :%f",total);
-            }
             
             
         }  
-    }else{
+    }else {
         printf("Numero de sessoes invalida");
     }
     
