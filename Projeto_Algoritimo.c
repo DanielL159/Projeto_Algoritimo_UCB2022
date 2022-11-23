@@ -35,8 +35,10 @@ ponto)*/
 
 int main (){
     int sessoes,pessoasPFilme[2],idade[100];
+    float total=0.00,inteira[100] ,meia[100];
+    int quantidade[100];
     int i,j,a,b;
-    int masculino=0,feminino=0;
+    int masculino=0,feminino=0,opcao;
     char filme [2][50],caracteristica[50];
 
     printf("Me forneca a quantidade de sessoes ? ");
@@ -94,6 +96,36 @@ int main (){
                 {
                   printf("\n\nIdade invalida para qualquer filme. por gentileza me informe a idade da pessoa %d: ",j+1);
                   scanf("%d",&idade[j]);
+                }
+
+                printf("A pessoa %d desseja um ingresso\n(1)MEIA - R$25,00\n(2)INTEIRA - R$50,00\n",j+1);
+                scanf("%d",&opcao);
+                while (opcao >2 || opcao <1)
+                {
+                    printf("Opcao da pessoa %d e invalida , por favor me informe qual ingresso a pessoa deseja\n(1)MEIA - R$25,00\n(2)INTEIRA - R$50,00\n",j+1);
+                    scanf("%d",&opcao);
+                }
+
+                printf("Quantos ingressoa a pessoa %d deseja ? ",j+1);
+                scanf("%d",quantidade);
+
+                switch (opcao)
+                {
+                    case 1:
+                        meia[j] = 25.00 * quantidade[j];
+                        printf("Valo a pagar: R$%.2f",meia[j]);
+                        total +=meia[j];
+                        break;
+
+                    case 2:
+                        inteira[j] = 50.00 * quantidade[j];
+                        printf("Valo a pagar R$%.2f",inteira[j]);
+                        total +=inteira[j];
+                    break;
+                    
+                    
+                    default:
+                        break;
                 }
                  
                  
