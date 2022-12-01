@@ -1,7 +1,7 @@
 /*ALUNOS : 
 Gabriel Vinicius Gonçaves Tebaldi , Matricula : UC22201074 , Curso : ADS
 Daniel Luiz dos Santos , Matricula : UC22103186, Curso : ADS
-Alisson de Almeida Felix , Matricula : UC22200323*/
+Alisson de Almeida Felix , Matricula : UC22200323, Curso : ADS */
 
 
 
@@ -170,7 +170,7 @@ int main ()
 	  	printf("\tde 3 atC) 13 anos\tCriancas\t%d\n\tde 14 atC) 17 anos\tAdolescentes\t%d\n\tde 18 atC) 64 anos\tAdultos\t%d\n\tde 65 atC) 100 anos\tIdosos\t%d\n\t",crianca, adolescentes, adulto, idoso);
 	  	printf("\nQuantidade de Homens maiores de 18:%d\nQuantidade de Mulheres maiores de 18 anos:%d",mIdadeMasculino, mIdadeFeminino);
 	  	printf("\n A idade media eh: %d", media);
-	  //caso a quantidade me venda de ingressod de meia seja maior que a da interia aparecera uma mensagem caso ao contrio apresentarea outro texto .
+	  //caso a quantidade de venda de ingresso de meia seja maior que a da interia aparecera uma mensagem caso ao contrio apresentarea outro texto .
 		if (qMeia > qInteira)
 			{
 			printf("Houveram mais vendas de ingressos de MEIA do que de INTEIRA e o valor arrecadado e :%f",total);
