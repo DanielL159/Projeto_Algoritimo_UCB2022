@@ -22,7 +22,7 @@ int main ()
 
   char filme[2][100], caracteristica[100][20];//nome do filme e ,caracteristica(masculino ou feminino)
 
-     do {
+     do { //Inicio da condição de aceitar apenas uma sessão.
     printf ("Me forneca a quantidade de sessoes ? ");
     scanf ("%d", &sessoes);
     
