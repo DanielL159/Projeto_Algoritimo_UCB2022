@@ -169,15 +169,15 @@ int main ()
 	  	printf ("\n\nDados:\n\tFaixa Etaria\tClassificacao\tQuantidade\n ");
 	  	printf("\tde 3 atC) 13 anos\tCriancas\t%d\n\tde 14 atC) 17 anos\tAdolescentes\t%d\n\tde 18 atC) 64 anos\tAdultos\t%d\n\tde 65 atC) 100 anos\tIdosos\t%d\n\t",crianca, adolescentes, adulto, idoso);
 	  	printf("\nQuantidade de Homens maiores de 18:%d\nQuantidade de Mulheres maiores de 18 anos:%d",mIdadeMasculino, mIdadeFeminino);
-	  	printf("\n A idade media eh: %d", media);
+	  	printf("\n A idade media eh: %d anos", media);
 	  //caso a quantidade de venda de ingresso de meia seja maior que a da interia aparecera uma mensagem caso ao contrio apresentarea outro texto .
 		if (qMeia > qInteira)
 			{
-			printf("Houveram mais vendas de ingressos de MEIA do que de INTEIRA e o valor arrecadado e :%f",total);
+			printf("\nHouveram mais vendas de ingressos de MEIA do que de INTEIRA e o valor arrecadado e :%f",total);
 			}
 		else if (qInteira > qMeia)
 			{
-			printf("Houveram mais vendas de ingressos de INTEIRA do que de MEIA e o valor arrecadado e :%f",total);
+			printf("\nHouveram mais vendas de ingressos de INTEIRA do que de MEIA e o valor arrecadado e :%f",total);
 			}
 
 
