@@ -1,7 +1,15 @@
 /*ALUNOS : 
 Gabriel Vinicius Gonçaves Tebaldi , Matricula : UC22201074 , Curso : ADS
 Daniel Luiz dos Santos , Matricula : UC22103186, Curso : ADS
-Alisson de Almeida Felix , Matricula : UC22200323, Curso : ADS */
+Alisson de Almeida Felix , Matricula : UC22200323, Curso : ADS 
+
+Citação capitulo 2
+Escolha nomes que revelem seus propositos, tenha bons nomes e troque sempre que achar melhores, para que todos que leiam seu codigo(incluindo voce mesmo) o compreendam bem.
+
+Citação capitulo 4
+Explicação da intenção, um comentario vai alem de ser apenas informações uteis sobre a implementação e fornece a intenção por trás de uma decisão.
+
+*/
 
 
 
